@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/output.css">
+
+    <title>BMI Calculator | Asuna Semoulin</title>
+</head>
+<body class="bg-white dark:bg-slate-900">
+    <header class="flex flex-col items-end p-2">
+        <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="" class="sr-only peer" id="toggle-dark-mode" checked>
+            <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-slate-700 dark:peer-checked:bg-blue-400"></div>
+        </label>
+    </header>
+
+    <main class="flex justify-center">
+        <section class="bg-gray-100 dark:bg-slate-800 text-black dark:text-white text-center p-5 rounded-lg ring-1 ring-slate-900/5 shadow-xl w-80 mb-4">
+            <h1 class="text-xl text-blue-700">BMI Calculator</h1>
+            <h2 class="text-9xl" id="bodymass">22.5</h2>
+            <h3 class="mb-2" id="bodytype">Overweight</h3>
+            <form id="bmi-calculator-form">
+                <div>
+                    <fieldset class="border border-solid border-gray-300 p-5">
+                        <legend>Select your gender:</legend>
+
+                        <div class="flex">
+                            <div class="w-full flex">
+                                <input class="mr-2" type="radio" name="gender" id="male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="w-full flex">
+                                <input class="mr-2" type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="my-2">
+                    <fieldset class="border border-solid border-gray-300 p-5 flex flex-col items-start">
+                        <div>
+                            <input class="mb-2 dark:text-slate-950" type="number" name="height" id="height" placeholder="0" required>
+                            <label for="height">cm</label>
+                        </div>
+                        <div>
+                            <input type="number" class="dark:text-slate-950" name="weight" id="weight" placeholder="0" required>
+                            <label for="weight">kg</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <button class="bg-green-400 text-white w-full p-2" type="submit">Calculate</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p class="opacity-50 dark:text-white text-center">Made by <a href="https://github.com/AsunaMarie" class="text-blue-500">Asuna Semoulin</a></p>
+    </footer>
+
+    <script src="./assets/js/set-theme.js"></script>
+    <script src="./assets/js/set-bmi.js"></script>
+</body>
+</html>
